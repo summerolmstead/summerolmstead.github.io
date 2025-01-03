@@ -212,7 +212,7 @@ html {
         font-size: 0.7em; 
         width:100%;
         text-align: left; /* align text to the right */
-        padding-left: 205px; /* padding to maintain space from the timeline */
+        padding-left: 220px; /* padding to maintain space from the timeline */
         padding-right: 5px; /* adjust padding to avoid overlapping */
     }
 
