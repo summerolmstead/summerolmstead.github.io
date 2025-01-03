@@ -173,26 +173,101 @@ footer .container {
 #contact i {
     margin-right: 8px;
 }
-
-/* media queries for mobile to fit in all forms of media */
-@media (max-width: 768px) {
-    nav ul {
-        display: block;
-        text-align: left;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    section {
-        padding: 2em 1em;
-    }
-}
 /* not as jumpy and does a pretty scroll lol */
 html {
     scroll-behavior: smooth;
 }
+
+/* media queries for mobile to fit in iphone view etc*/
+@media (max-width: 768px) {
+    /* adjust timeline layout for smaller screens */
+    .timeline {
+        width: 100%; 
+    }
+
+    /*timeline item layout should be vertical for mobile */
+    .timeline-item {
+        flex-direction: column;
+        align-items: center; 
+        margin-bottom: 10px; 
+    }
+
+    /*timeline content adjustments for both left and right */
+    .timeline-content.left,
+    .timeline-content.right {
+        position: relative; /* ensure position for left and right alignment */
+    }
+
+    /*adjust left timeline content specifically */
+    .timeline-content.left {
+        font-size: 0.6em; 
+        width:95%;
+        text-align: left; /* align text to the left */
+        padding-left: -400px; /* add a little padding but not too much */
+        
+    }
+
+    /* adjust right timeline content specifically */
+    .timeline-content.right {
+        font-size: 0.7em; 
+        width:100%;
+        text-align: left; /* align text to the right */
+        padding-left: 190px; /* padding to maintain space from the timeline */
+        padding-right: 5px; /* adjust padding to avoid overlapping */
+    }
+
+    /*reduce width of the timeline line */
+    .timeline-line {
+        width: 1px;
+    }
+
+    /*adjust icon size */
+    .timeline-icon {
+        padding: 4px;
+        font-size: 18px;
+    }
+
+    /*adjust icon inside the timeline */
+    .timeline-icon i {
+        font-size: 16px;
+    }
+
+    /*reduce font sizes for other sections on mobile */
+    header h1 {
+        font-size: 2em; 
+    }
+
+    header p {
+        font-size: .8em; 
+    }
+
+    nav ul li a {
+        font-size: 1em; 
+    }
+
+    section h2 {
+        font-size: 1em; 
+    }
+
+    section {
+        padding: .7em 1em; 
+    }
+
+    footer {
+        font-size: 0.8em;
+        padding: 1.5em 1em; 
+    }
+
+    #contact a {
+        text-decoration: none;
+        color: inherit;
+        font-size: 1em;
+        margin-right: 15px;
+    }
+    
+
+}
+
 
 
 
