@@ -21,6 +21,7 @@ Hello! This is some starter code for my website for my resume :) -->
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
             <li><a href ="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
@@ -36,6 +37,98 @@ Hello! This is some starter code for my website for my resume :) -->
         
         </div>
     </section>
+
+    <section id="skills">
+        <div class="skills-category">
+            <h3 class="dropdown-header" onclick="toggleDropdown('programming')">
+                Programming Languages
+                <span class="arrow">&#9662;</span> <!-- Down Arrow -->
+            </h3>
+            <div class="dropdown-content" id="programming">
+                <div class="skill">
+                    <div class="skill-name">Python</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%; background-color: #065509;">Advanced</div>
+                    </div>
+                    <p>Applied in data analysis with libraries such as Pandas, NumPy, and Matplotlib, and used machine learning packages like Scikit-Learn for model development.</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Java</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 55%; background-color: #a9cf12;">Intermediate</div>
+                    </div>
+                    <p>Concentrated on object-oriented design for projects in computer science education.</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">JavaScript</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 60%; background-color: #4c910b;">Intermediate</div>
+                    </div>
+                    <p>Gained practical experience through web development projects in a Software Engineering course, and use JavaScript extensively for coding Excel macros during my internship at Unum.</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">HTML</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%; background-color: #356507;">Advanced</div>
+                    </div>
+                    <p>Acquired front-end development skills through multiple college projects.</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">CSS</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 75%; background-color: #558b20;">Advanced</div>
+                    </div>
+                    <p>Utilized for front-end styling in various web projects to create responsive and user-friendly interfaces.</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">SQL</div>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 45%; background-color: #c9d423;">Intermediate</div>
+                    </div>
+                    <p>Learned through database-related projects in File and Database course to query and manipulate data.</p>
+                </div>
+
+            </div>
+        </div>
+    
+        <!-- Applications/ IDEs Section (with dropdown) -->
+        <div class="skills-category">
+            <h3 class="dropdown-header" onclick="toggleDropdown('applications')">
+                Applications
+                <span class="arrow">&#9662;</span> <!-- Down Arrow -->
+            </h3>
+            <div class="dropdown-content" id="applications">
+
+                <div class="skill">
+                    <div class="skill-name">Excel</div>
+                    <p>Skilled in advanced functions like pivot tables, VLOOKUP, and macros for data automation.</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Salesforce</div>
+                    <p>Proficient in navigating Salesforce to manage queues, handle service requests, and use dashboards to analyze data for decision-making. Experienced in utilizing Salesforce's CRM tools to streamline processes and improve operational efficiency.</p>
+
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">STATA</div>
+                    <p>Skilled in performing advanced statistical analysis, including linear regressions and data manipulation, primarily through coursework in Economics.</p>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">Visual Studio Code</div>
+                    <p>Proficient in using Visual Studio Code for full-stack web development, integrating projects with version control via Git and GitHub. Experienced in leveraging extensions for workflow optimization, debugging, and version tracking in both front-end and back-end development.</p>
+                </div>
+
+            </div>
+        </div>
+        </section>
+    
 
     <section id="education">
         <h2>Education</h2>
@@ -146,6 +239,13 @@ Hello! This is some starter code for my website for my resume :) -->
         <p> <a href="https://github.com/summerolmstead" target="_blank"><i class="fab fa-github"></i> Github</a></p>
     </section>
    
+    <script>
+        //javaScript for toggling the dropdown
+        function toggleDropdown(section) {
+            var content = document.getElementById(section);
+            content.classList.toggle('show');
+        }
+    </script>
 </body>
 <footer>
     <p>&copy; 2025 Summer Olmstead</p>
