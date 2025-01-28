@@ -149,22 +149,51 @@ footer .container {
     font-weight: bold;
     margin-bottom: 5px;
 }
-
+/*
 .progress-bar {
     background-color: #e0e0e0;
     border-radius: 5px;
-    height: 15px;  /* Smaller height for the progress bar */
-    width: 80%;    /* Reduced width */
-    margin: 0 auto; /* Center the progress bar */
-}
+    height: 15px;  /* Smaller height for the progress bar 
+    width: 80%;    /* Reduced width 
+    margin: 0 auto; /* Center the progress bar 
+}*/
 
-.progress {
+/*.progress {
     text-align: center;
     color: white;
     height: 100%;
-    line-height: 15px;  /*align text vertically in the smaller bar */
+    line-height: 15px;  /*align text vertically in the smaller bar 
     border-radius: 5px;
+} */
+
+.progress-bar {
+    position: relative;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    height: 15px;  /*height of the progress bar */
+    width: 100%;    /*full width of the progress bar */
 }
+
+.progress {
+    height: 100%;
+    border-radius: 5px;
+    position: relative; 
+    text-align: center; /*center the label inside the progress bar */
+    line-height: 15px; /*vertically center the text */
+    color: white;
+}
+
+.progress-number {
+    position: absolute;
+    left: 100%;  /* Position the number just after the filled part */
+    top: 50%;  /* Vertically center the number inside the bar */
+    transform: translateY(-50%); /* adjust for perfect vertical centering */
+    font-size: 0.9rem;  /* adjust font size */
+    color: black;  /* black color for the number */
+    font-weight: bold;
+    white-space: nowrap; /* prevent text from wrapping */
+}
+
 
 /*style for skill description text */
 .skill p {
@@ -354,7 +383,4 @@ html {
     
 
 }
-
-
-
 
