@@ -7,7 +7,7 @@
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #f9f9f9;
+    background-color: #f3e5e5;
     color: #333;
     display: flex;
     flex-direction: column;
@@ -15,13 +15,14 @@ body {
    
 }
 
+
 /*ensure content stretches properly */
 main {
     flex-grow: 1; /* makes the main content area grow and take up the available space */
 }
 
 header {
-    background-color: #333;
+    background-color: #bc5e5e;
     color: white;
     padding: 2em;
     text-align: center;
@@ -37,7 +38,7 @@ header p {
 }
 
 nav {
-    background-color: #444;
+    background-color: #796463;
     text-align: center;
     padding: 1em 0;
 }
