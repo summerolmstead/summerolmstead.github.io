@@ -1,1 +1,1 @@
-This is a personal passion project I decided to make mainly for another form to be my own personal resume made from my own code from scratch. I hope you enjoy browsing! :)
+This is a personal passion project which I decided to make mainly to be another form of my own personal resume. I hope you enjoy browsing! :)
