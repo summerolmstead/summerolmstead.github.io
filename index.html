@@ -41,84 +41,72 @@ Hello! This is some starter code for my website for my resume :) -->
 
     <section id="skills">
         <div class="skills-category">
-            <h3 class="dropdown-header" onclick="toggleDropdown('programming')">
-                Programming Languages
-                <span class="arrow">&#9662;</span> <!-- Down Arrow -->
-            </h3>
-            <div class="dropdown-content" id="programming">
-                <div class="skill">
-                    <div class="skill-name">Python</div>
-                    </div>
-                    <p>Applied in data analysis with libraries such as Pandas, NumPy, and Matplotlib, and used machine learning packages like Scikit-Learn for model development.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">Java</div>
-                    </div>
-                    <p>Concentrated on object-oriented design for projects in computer science education.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">JavaScript</div>
-                    <p>Gained practical experience through web development projects in a Software Engineering course, and use JavaScript extensively for coding Excel macros during my internship at Unum.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">HTML</div>
-                    <p>Acquired front-end development skills through multiple college projects.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">CSS</div>
-                    <p>Utilized for front-end styling in various web projects to create responsive and user-friendly interfaces.</p>
-                </div>
-
-                <div class="skill">
-                  <!--  <div class="skill-name">SQL</div>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 45%; background-color: #c9d423;">Intermediate</div>
-                        <span class="progress-number">45%</span>
-                    </div> -->
-                    <p>Learned through database-related projects in File and Database course to query and manipulate data.</p>
-                </div>
-
+          <h3 class="dropdown-header" onclick="toggleDropdown('programming')">
+            Programming Languages
+            <span class="arrow">&#9662;</span> <!-- Down Arrow -->
+          </h3>
+          <div class="dropdown-content" id="programming">
+            <div class="skill">
+              <div class="skill-name">Python</div>
+              <p>Applied in data analysis with libraries such as Pandas, NumPy, and Matplotlib, and used machine learning packages like Scikit-Learn for model development.</p>
             </div>
-        </div>
-    
-        <!-- Applications/ IDEs Section (with dropdown) -->
-        <div class="skills-category">
-            <h3 class="dropdown-header" onclick="toggleDropdown('applications')">
-                Applications
-                <span class="arrow">&#9662;</span> <!-- Down Arrow -->
-            </h3>
-            <div class="dropdown-content" id="applications">
-
-                <div class="skill">
-                    <div class="skill-name">Excel</div>
-                    <p>Skilled in advanced functions like pivot tables, VLOOKUP, and macros for data automation.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">Salesforce</div>
-                    <p>Proficient in navigating Salesforce to manage queues, handle service requests, and use dashboards to analyze data for decision-making. Experienced in utilizing Salesforce's CRM tools to streamline processes and improve operational efficiency.</p>
-
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">STATA</div>
-                    <p>Skilled in performing advanced statistical analysis, including linear regressions and data manipulation, primarily through coursework in Economics.</p>
-                </div>
-
-                <div class="skill">
-                    <div class="skill-name">Visual Studio Code</div>
-                    <p>Proficient in using Visual Studio Code for full-stack web development, integrating projects with version control via Git and GitHub. Experienced in leveraging extensions for workflow optimization, debugging, and version tracking in both front-end and back-end development.</p>
-                </div>
-
+      
+            <div class="skill">
+              <div class="skill-name">Java</div>
+              <p>Concentrated on object-oriented design for projects in computer science education.</p>
             </div>
+      
+            <div class="skill">
+              <div class="skill-name">JavaScript</div>
+              <p>Gained practical experience through web development projects in a Software Engineering course, and use JavaScript extensively for coding Excel macros during my internship at Unum.</p>
+            </div>
+      
+            <div class="skill">
+              <div class="skill-name">HTML</div>
+              <p>Acquired front-end development skills through multiple college projects.</p>
+            </div>
+      
+            <div class="skill">
+              <div class="skill-name">CSS</div>
+              <p>Utilized for front-end styling in various web projects to create responsive and user-friendly interfaces.</p>
+            </div>
+      
+            <div class="skill">
+              <p>Learned through database-related projects in File and Database course to query and manipulate data.</p>
+            </div>
+          </div>
         </div>
-        </section>
-    
+      </section>
 
+      <!-- Applications/ IDEs Section (with dropdown) -->
+    <div class="skills-category">
+        <h3 class="dropdown-header" onclick="toggleDropdown('applications')">
+        Applications
+        <span class="arrow">&#9662;</span> <!-- Down Arrow -->
+        </h3>
+        <div class="dropdown-content" id="applications">
+            <div class="skill">
+            <div class="skill-name">Excel</div>
+            <p>Skilled in advanced functions like pivot tables, VLOOKUP, and macros for data automation.</p>
+        </div>
+  
+        <div class="skill">
+            <div class="skill-name">Salesforce</div>
+            <p>Proficient in navigating Salesforce to manage queues, handle service requests, and use dashboards to analyze data for decision-making. Experienced in utilizing Salesforce's CRM tools to streamline processes and improve operational efficiency.</p>
+        </div>
+  
+        <div class="skill">
+            <div class="skill-name">STATA</div>
+            <p>Skilled in performing advanced statistical analysis, including linear regressions and data manipulation, primarily through coursework in Economics.</p>
+        </div>
+  
+        <div class="skill">
+            <div class="skill-name">Visual Studio Code</div>
+            <p>Proficient in using Visual Studio Code for full-stack web development, integrating projects with version control via Git and GitHub. Experienced in leveraging extensions for workflow optimization, debugging, and version tracking in both front-end and back-end development.</p>
+        </div>
+        </div>
+    </div>
+  
     <section id="education">
         <h2>Education</h2>
          <div class="utc-logo">
@@ -193,9 +181,16 @@ Hello! This is some starter code for my website for my resume :) -->
    
     <script>
         //javaScript for toggling the dropdown
-        function toggleDropdown(section) {
-            var content = document.getElementById(section);
+        function toggleDropdown(id) 
+        {
+            const content = document.getElementById(id);
+            const arrow = content.previousElementSibling.querySelector('.arrow');
+  
+            // Toggle visibility of the dropdown content
             content.classList.toggle('show');
+  
+            // Toggle the rotation of the arrow
+            arrow.classList.toggle('rotated');
         }
     </script>
 </body>
