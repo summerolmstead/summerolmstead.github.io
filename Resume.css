@@ -6,7 +6,11 @@
 
 body {
     font-family: Arial, sans-serif;
-    padding: 20px;
+  }
+
+html, body {
+    height: 100%;
+    width: 100%;
   }
 
 /*ensure content stretches properly */
@@ -124,7 +128,7 @@ footer .container {
     justify-content: center;  
     align-items: center;      
     cursor: pointer;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 10px;  
 }
 
