@@ -267,25 +267,44 @@ footer .container {
     font-size: 20px;
     color: #333;
 }
-
-/* add styles for the project image and hover effect */
-.project-image {
-    max-width: 50%; /* so picture isnt too big */
-    border: 2px solid transparent; /* default border */
-    transition: transform 0.3s ease, border-color 0.3s ease; /* smooth transition for hover effects */
-}
-
-.project-image:hover {
-    transform: scale(1.05); /* slightly zoom in on hover */
-    border-color: #3498db; /* change border color when hovering */
-}
-
-.image-link {
-    display: inline-block; /* ensure it behaves like a block when wrapping the image */
-    text-decoration: none; /* removes underline from the link */
-}
-
-
+/* project container for flexbox layout and project is on the side  */
+.projects-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px; /* spacing between projects */
+    gap: 20px; /* space between text and image */
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
+  }
+  
+  /* project description style */
+  .project-description {
+    flex: 1; /* allows it to take up available space */
+    width: 45%; /* this controls the width of the text section */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #333;
+  }
+  
+  /* project image style */
+  .project-image {
+    width: 100%; /* ensure the image fills its container */
+    max-width: 400px; /* limit image size */
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 8px; /* optional: rounded corners for a smoother look */
+  }
+  
+  .project-image:hover {
+    transform: scale(1.05);
+    border-color: #3498db;
+  }
+  
+  /* Link around the image */
+  .image-link {
+    display: inline-block;
+    text-decoration: none;
+  }
 /* social media icons */
 #contact a {
     text-decoration: none;
@@ -366,6 +385,21 @@ html {
     .timeline-icon i {
         font-size: 16px;
     }
+
+    .projects-container {
+        flex-direction: column; /* stack the image and description vertically on small screens */
+        align-items: center; /* center content on small screens */
+      }
+    
+      .project-description {
+        width: 100%; /* make description take full width */
+        text-align: center; /* center text for smaller screens */
+      }
+    
+      .project-image {
+        width: 80%; /* make image responsive */
+        max-width: 300px; /* limit image size */
+      }
 
     /*reduce font sizes for other sections on mobile */
     header h1 {
