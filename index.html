@@ -16,7 +16,12 @@ Hello! This is some starter code for my website for my resume :) -->
 <body>
     <header>
         <h1>Summer Olmstead</h1>
-        <p> Undergraduate Student at UTC majoring in CS: Data Science with a minor in Economics. </p>
+        <p> Undergraduate Student at UTC majoring in CS: Data Science with a minor in Economics. </p> 
+    <section id="contact">
+        <p> <a href="mailto:summerolmstead1@gmail.com"><i class="fas fa-envelope"></i> summerolmstead1@gmail.com</a></p>
+        <p> <a href="https://www.linkedin.com/in/summer-olmstead/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
+        <p> <a href="https://github.com/summerolmstead" target="_blank"><i class="fab fa-github"></i>Github</a></p>
+    </section>
     </header>
 
     <nav>
@@ -26,7 +31,6 @@ Hello! This is some starter code for my website for my resume :) -->
             <li><a href ="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
 
@@ -196,20 +200,6 @@ Hello! This is some starter code for my website for my resume :) -->
 
         <div class="projects-container">
             <div class="project-description">
-            <p><strong></strong>:<em> Programming Languages for Advanced Data Analytics Final Fall 2024 </em> </p>
-            <p> Developed a logistic regression model to predict loan approval decisions based on key applicant characteristics. Fine-tuned the model to identify and quantify the impact of each variable on the likelihood of loan approval or denial. Analyzed the data to uncover insights on the most influential factors driving loan decisions, improving the understanding of approval patterns. Achieved strong model performance and used the results to inform loan approval criteria and decision-making processes. </p>
-            </div>
-            <div class="'project-image"
-            <a href="https://github.com/summerolmstead/LoanApprovalLogisticRegression/blob/main/CS4180Final_Project.ipynb" target="_blank" class="image-link">
-            <img src="logistic-regression-features-loan.png" alt="Loan Approval Logistic Regression" class="project-image">
-            </a>
-            </div>
-        </div>
-
-        <br></br>
-
-        <div class="projects-container">
-            <div class="project-description">
             <p><strong>RateYourCity App</strong>: <em> Social Media App for Travelers | Software Engineering Fall 2024</em> </p>
             <p>   •	Developed a demo version for Chattanooga, allowing users to review, like, and favorite activities (ex. Hotels, Restaurants, Tourist Attractions). Served as Scrum Master, leading the team and coordinating sprints. Designed and implemented server layers, focusing on backend development. Created a MongoDB Atlas database to collect and manage user data. Developed user signup, login logic, and authentication in the middle layer. Implemented security measures to ensure safe data transfer between frontend and backend. Created rating and comment system feature for all objects. </p> 
             </div>
@@ -224,12 +214,35 @@ Hello! This is some starter code for my website for my resume :) -->
         </ul>
     </section>
 
-    <!-- linked from earlier to grab the icons from the web-->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p> <a href="mailto:summerolmstead1@gmail.com"><i class="fas fa-envelope"></i> summerolmstead1@gmail.com</a></p>
-        <p> <a href="https://www.linkedin.com/in/summer-olmstead/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-        <p> <a href="https://github.com/summerolmstead" target="_blank"><i class="fab fa-github"></i> Github</a></p>
+    <section id="mini-projects">
+        <h2>Visualization Projects</h2>
+        <div class="projects-grid">
+            <div class="project-item">
+                <a href="https://github.com/summerolmstead/Pizza-Sales-Visualization" class="project-link">
+                    <img src="pizza-heatmap1.png" alt="Project 1" class="project-img">
+                    <div class="overlay">
+                        <p>Pizza Sales Analysis + Visualization</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="https://github.com/summerolmstead/Brazil-Forest-Fires-Visualization/blob/main/interactive-brazil-fire-map-examples.PNG" class="project-link">
+                    <img src="interactive-brazil-fire-map.png" alt="Project 2" class="project-img">
+                    <div class="overlay">
+                        <p>Brazil Fires by State Map Visualization</p>
+                    </div>
+                </a>
+            </div>
+            <div class="project-item">
+                <a href="https://github.com/summerolmstead/Apple-Stock-Visualization" class="project-link">
+                    <img src="3d-apple-stock.PNG" alt="Project 3" class="project-img">
+                    <div class="overlay">
+                        <p>3D Apple Stock Visualization</p>
+                    </div>
+                </a>
+            </div>
+        
+        </div>
     </section>
    
     <script>
