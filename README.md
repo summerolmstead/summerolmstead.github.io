@@ -1,1 +1,1 @@
-This is a personal passion project which I decided to make mainly to be another form of my own personal resume. I hope you enjoy browsing! :)
+This is a personal passion project which I decided to make mainly to be another form of my own personal resume. I always enjoy creating new things and what better way than to showcase some of my skills in a way that is my own creative vision! I hope you enjoy browsing! :)
