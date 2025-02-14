@@ -271,40 +271,75 @@ footer .container {
 .projects-container {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px; /* spacing between projects */
-    gap: 20px; /* space between text and image */
-    flex-wrap: wrap; /* allow wrapping on smaller screens */
-  }
-  
-  /* project description style */
-  .project-description {
-    flex: 1; /* allows it to take up available space */
-    width: 45%; /* this controls the width of the text section */
+    align-items: flex-start;
+    margin-bottom: 40px; /* Space between project sections */
+    gap: 20px; /* Space between text and image */
+    flex-wrap: wrap;
+}
+
+/* Description area - on the left */
+.project-description {
+    flex: 1;
+    width: 45%; /* Controls the width of the description */
     font-size: 1.1rem;
     line-height: 1.6;
     color: #333;
-  }
-  
-  /* project image style */
-  .project-image {
-    width: 100%; /* ensure the image fills its container */
-    max-width: 400px; /* limit image size */
-    border: 2px solid transparent;
-    transition: transform 0.3s ease, border-color 0.3s ease;
-    border-radius: 8px; /* optional: rounded corners for a smoother look */
-  }
-  
-  .project-image:hover {
-    transform: scale(1.05);
-    border-color: #3498db;
-  }
-  
-  /* Link around the image */
-  .image-link {
-    display: inline-block;
-    text-decoration: none;
-  }
+}
+
+/* Image area - on the right */
+.project-image-container {
+    position: relative;
+    flex: 1;
+    width: 45%;
+}
+
+/* Style for the image */
+.project-image {
+    width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effect on image (zoom and darken) */
+.project-image:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    filter: brightness(0.8); /* Slightly darken image on hover */
+}
+
+/* Make sure the link around the image is block-level (to cover the image entirely) */
+.image-link {
+    display: block;
+    text-decoration: none; /* No underline on the link */
+}
+
+/* Overlay that appears on hover */
+.project-image-container:hover .overlay {
+    opacity: 1;
+}
+
+/* Overlay text styling */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease; /* Smooth transition */
+}
+
+.overlay p {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 10px;
+}
 /* social media icons */
 #contact a {
     text-decoration: none;
@@ -347,8 +382,8 @@ html {
 }
 
 .project-img:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    filter: brightness(0.8); /* Darken image slightly on hover */
+    transform: scale(1.05); /*slight zoom on hover */
+    filter: brightness(0.8); /*darken image slightly on hover */
 }
 
 .overlay {
@@ -367,7 +402,7 @@ html {
 }
 
 .project-item:hover .overlay {
-    opacity: 1; /* Show overlay on hover */
+    opacity: 1; /*show overlay on hover */
 }
 
 .overlay p {
@@ -377,7 +412,7 @@ html {
 }
 
 .project-link {
-    text-decoration: none; /* Remove underline from links */
+    text-decoration: none; 
     display: block;
 }
 
@@ -467,6 +502,15 @@ html {
       }
       .projects-grid {
         grid-template-columns: 1fr 1fr; /* 2 columns on smaller screens */
+    }
+  
+    .project-image-container {
+        width: 80%; /* image will occupy less space on smaller screens */
+     }
+    
+     
+    .overlay p {
+         font-size: 1rem; 
     }
 
     /*reduce font sizes for other sections on mobile */
