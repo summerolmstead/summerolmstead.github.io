@@ -50,7 +50,7 @@ Hello! This is some starter code for my website for my resume :) -->
         <div class="skills-category">
           <h2 class="dropdown-header" onclick="toggleDropdown('programming')">
             Programming Languages
-            <span class="arrow">&#9662;</span> <!-- Down Arrow -->
+            <span class="arrow">&#9662;</span> <!--down arrow -->
           </h2>
           <div class="dropdown-content" id="programming">
             <div class="skill">
@@ -113,6 +113,12 @@ Hello! This is some starter code for my website for my resume :) -->
             <div class="skill-name">Visual Studio Code</div>
             <p>Proficient in using Visual Studio Code for full-stack web development, integrating projects with version control via Git and GitHub. Experienced in leveraging extensions for workflow optimization, debugging, and version tracking in both front-end and back-end development.</p>
         </div>
+        
+        <div class="skill">
+            <div class="skill-name">Service Now</div>
+            <p>Proficient in Service Now for case assignments and dashboard analytics in internship.</p>
+        </div>
+
         </div>
     </div>
   
@@ -328,10 +334,10 @@ Hello! This is some starter code for my website for my resume :) -->
             const content = document.getElementById(id);
             const arrow = content.previousElementSibling.querySelector('.arrow');
   
-            // Toggle visibility of the dropdown content
+            //toggle visibility of the dropdown content
             content.classList.toggle('show');
   
-            // Toggle the rotation of the arrow
+            //toggle the rotation of the arrow
             arrow.classList.toggle('rotated');
         }
     </script>
