@@ -19,8 +19,8 @@ main {
 }
 
 header {
-    background-color: #bc5e5e;
-    color: white;
+    background-color: #054c5e;
+    color: rgb(202, 231, 246);
     padding: 2em;
     text-align: center;
 }
@@ -35,7 +35,7 @@ header p {
 }
 
 nav {
-    background-color: #796463;
+    background-color: #176c71;
     text-align: center;
     padding: 1em 0;
 }
@@ -50,7 +50,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+    color: rgb(143, 229, 230);
     text-decoration: none;
     font-size: 1.1em;
 }
@@ -84,7 +84,7 @@ section h2 {
 }
 
 footer {
-    background-color: #bc5e5e;
+    background-color: #176c71;
     color: white;
     padding: 2em;
     text-align: center;
