@@ -202,55 +202,34 @@ footer .container {
     font-weight: bold;
     white-space: nowrap; /* prevent text from wrapping */
 }
-
-
-
-/* timeline styling */
 .timeline {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 40px auto;
+    position: relative;
     width: 70%;
-    max-width: 100%; /* allow full width */
-    position: relative;
+    margin: 40px auto;
+    max-width: 100%;
+    padding: 40px 0;
 }
 
-.timeline-item {
-    display: flex;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    margin-bottom: 40px;
-}
-
-.timeline-content.left {
-    width: 65%;
-    padding-right: 20px;
-    text-align: right;
-    position: relative;
-}
-
-.timeline-content.right {
-    width: 90%;
-    padding-left: 155px;
-    text-align: left;
-    position: relative;
-    margin-left: 20px;
-}
-
-/* timeline line */
+/* The vertical timeline line */
 .timeline-line {
     position: absolute;
     top: 0;
-    bottom: 0;
     left: 50%;
-    width: 2px;
-    background-color: #333;
     transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background-color: #333;
+    z-index: 0;
 }
 
-/* timeline icon */
+.timeline-item {
+    position: relative;
+    width: 100%;
+    margin-bottom: 60px;
+    min-height: 100px;
+}
+
+/* Icon centered on the line */
 .timeline-icon {
     position: absolute;
     top: 50%;
@@ -260,12 +239,49 @@ footer .container {
     border-radius: 50%;
     border: 3px solid #333;
     padding: 10px;
-    z-index: 1;
+    z-index: 2;
 }
 
-.timeline-icon i {
-    font-size: 20px;
-    color: #333;
+/* Content blocks */
+.timeline-content.left,
+.timeline-content.right {
+    width: 45%;
+    position: relative;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* Left content aligned to left, text right-aligned */
+.timeline-content.left {
+    left: 0;
+    text-align: right;
+}
+
+/* Right content aligned to right, text left-aligned */
+.timeline-content.right {
+    left: 55%;
+    text-align: left;
+}
+
+/* Optional: Add arrows pointing to the timeline line */
+.timeline-content.left::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent transparent transparent #333;
+}
+
+.timeline-content.right::after {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -15px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent #333 transparent transparent;
 }
 /* project container for flexbox layout and project is on the side  */
 .projects-container {
