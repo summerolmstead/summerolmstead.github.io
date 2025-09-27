@@ -210,7 +210,6 @@ footer .container {
     padding: 40px 0;
 }
 
-/* The vertical timeline line */
 .timeline-line {
     position: absolute;
     top: 0;
@@ -263,26 +262,6 @@ footer .container {
     text-align: left;
 }
 
-/* Optional: Add arrows pointing to the timeline line */
-.timeline-content.left::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    right: -15px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent transparent transparent #333;
-}
-
-.timeline-content.right::after {
-    content: '';
-    position: absolute;
-    top: 20px;
-    left: -15px;
-    border-width: 10px;
-    border-style: solid;
-    border-color: transparent #333 transparent transparent;
-}
 /* project container for flexbox layout and project is on the side  */
 .projects-container {
     display: flex;
