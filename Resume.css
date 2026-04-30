@@ -4,9 +4,176 @@
     box-sizing: border-box;
 }
 
+/* Import EB Garamond for the site */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap');
+
+/* --- Modern / Cute theme overrides --- */
+:root{
+    --accent:#FF9AA2; /* soft pink */
+    --accent-2:#FFD3B6; /* peach */
+    --muted:#6B6B7A;
+    --card:#FFF7F8;
+    --content-max-width: 900px;
+}
+
+body{
+    background: linear-gradient(180deg,#fff 0%, #FFFBF7 100%);
+    color: #333;
+}
+
+.hero{
+    /* make the hero a full-bleed banner (override generic section rules) */
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    padding: 40px 0;
+    background: var(--accent);
+}
+.hero-inner{
+    max-width: var(--content-max-width);
+    margin:0 auto;
+    text-align:center;
+}
+.hero-inner { padding: 0 16px; }
+.hero-img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+    border:6px solid rgba(255,255,255,0.6);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    object-fit:cover;
+}
+.hero h2{font-family: 'EB Garamond', serif;font-size:1.6rem;margin:12px 0;color:#fff}
+.tagline{color:var(--muted);margin-top:6px}
+
+/* use EB Garamond for headings and timeline h3 */
+section h2, .timeline-content h3 {
+    font-family: 'EB Garamond', serif;
+    color: #3a3a44;
+}
+
+/* Center specific section headings for better visual alignment */
+#about h2, #experience h2, #education h2 {
+    text-align: center;
+    display: block;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0.75rem;
+}
+
+section{background:transparent}
+
+/* make sections look like soft cards */
+section > .skills-category, section > .utc-logo, .projects-container{background:var(--card);border-radius:12px;padding:18px;margin:12px 0;box-shadow: 0 6px 18px rgba(0,0,0,0.04)}
+
+/* Programming grid: cute badge-style skills */
+.programming-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
+.programming-grid .skill{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.95));border-radius:12px;padding:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04);text-align:center}
+.programming-grid .skill-name{font-weight:700;color:var(--accent);margin-bottom:6px;font-size:1.05rem}
+.programming-grid .skill p{font-size:0.92rem;color:var(--muted);margin:0}
+.programming-grid .skill:hover{transform:translateY(-4px);transition:transform 150ms ease, box-shadow 150ms ease;box-shadow:0 10px 20px rgba(0,0,0,0.06)}
+
+@media (max-width:480px){
+    .programming-grid{grid-template-columns:repeat(1,1fr);gap:10px}
+    .programming-grid .skill{padding:10px}
+}
+
+/* on wider screens prefer a 4-column layout for symmetry */
+@media (min-width:1100px){
+    .programming-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Testing tools chips */
+.testing-tools{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
+.tool-chip{background:rgba(255,255,255,0.95);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;box-shadow:0 6px 12px rgba(0,0,0,0.04)}
+.tool-chip:hover{transform:translateY(-3px);box-shadow:0 10px 18px rgba(0,0,0,0.06)}
+
+.testing-title{font-family:'EB Garamond', serif;text-align:center;margin-top:18px;margin-bottom:8px;color:#3a3a44}
+
+/* Make the involvement lines under Education slightly smaller for better visual hierarchy */
+#education h3 {
+    font-size: 1.05rem;
+    margin-top: 12px;
+    color: #3a3a44;
+}
+
+#education h3 + p,
+#education h3 ~ p {
+    font-size: 0.95rem;
+    color: var(--muted);
+    margin: 0.25em 0;
+}
+
+/* smaller paddings for mobile */
+@media (max-width:768px){
+    .hero{padding:28px 0}
+    .hero-img{width:96px;height:96px}
+    section{padding:12px}
+}
+
+/* hide project-related classes (safety) */
+.projects-container, .projects-grid, .project-item, #projects, #mini-projects{display:none !important}
+
+/* subtle link accent */
+a{color:var(--accent-2)}
+
+/* keep timeline readable but lighter */
+.timeline{background:transparent;padding:24px 0}
+.timeline-line{background:rgba(0,0,0,0.08)}
+.timeline-icon{border-color:rgba(0,0,0,0.12)}
+
+/* end modern theme */
+
+/* Topbar (compact) - legacy: icons are now in the hero but keep styles for .top-link */
+.top-link{color:#fff;font-size:1.05rem;text-decoration:none;padding:6px;border-radius:8px}
+.top-link:hover{background:rgba(255,255,255,0.12);color:#fff}
+
+/* Social icons inside the hero */
+.hero-social{display:flex;justify-content:center;gap:16px;margin-top:14px}
+.hero-social .top-link{background:rgba(255,255,255,0.06);padding:10px;border-radius:10px}
+.hero-social .top-link i{font-size:1.15rem}
+
+/* Robust timeline layout: grid on desktop, stacked on mobile */
+.timeline{max-width:var(--content-max-width);margin:20px auto;padding:30px 0;position:relative}
+.timeline-line{position:absolute;left:50%;top:0;bottom:0;width:2px;background:rgba(0,0,0,0.12)}
+.timeline-item{display:grid;grid-template-columns:1fr 60px 1fr;column-gap:20px;align-items:start;margin-bottom:32px}
+.timeline-content.left{text-align:right;padding-right:12px}
+.timeline-content.right{text-align:left;padding-left:12px}
+.timeline-icon{justify-self:center;align-self:start;position:relative;top:6px;background:#fff;border-radius:50%;border:2px solid rgba(0,0,0,0.12);padding:10px}
+
+@media (max-width:768px){
+    .timeline{padding:12px 8px}
+    .timeline-line{left:20px}
+    .timeline-item{grid-template-columns:40px 1fr;grid-template-areas:"icon content";column-gap:12px}
+    .timeline-icon{grid-column:1;justify-self:start}
+    .timeline-content.left, .timeline-content.right{grid-column:2;text-align:left;padding:0}
+}
+
+/* Page width consistency and header/footer gradient */
+nav ul {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 0;
+}
+nav ul li { display: inline-block; }
+
+footer{
+    background: linear-gradient(90deg,var(--accent), var(--accent-2));
+    color: white;
+}
+footer p { max-width: var(--content-max-width); margin: 0 auto; }
+
+/* Make sure section widths align to the same content width */
+section, .hero-inner, .topbar-inner, .timeline { box-sizing: border-box; }
+
+
 body {
-    font-family: Arial, sans-serif;
-  }
+    font-family: 'EB Garamond', Georgia, serif;
+}
 
 html, body {
     height: 100%;
@@ -19,8 +186,8 @@ main {
 }
 
 header {
-    background-color: #054c5e;
-    color: rgb(202, 231, 246);
+    background: linear-gradient(90deg,var(--accent), var(--accent-2));
+    color: #fff;
     padding: 2em;
     text-align: center;
 }
@@ -35,7 +202,7 @@ header p {
 }
 
 nav {
-    background-color: #176c71;
+    background: linear-gradient(90deg,var(--accent), var(--accent-2));
     text-align: center;
     padding: 1em 0;
 }
@@ -50,13 +217,14 @@ nav ul li {
 }
 
 nav ul li a {
-    color: rgb(143, 229, 230);
+    color: #fff;
     text-decoration: none;
     font-size: 1.1em;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
+    color: #fff;
 }
 
 .profile-container {
@@ -71,8 +239,8 @@ nav ul li a:hover {
     margin-right: 20px;
 }
 
-/* section styling */
-section {
+/* section styling (exclude hero so hero can be full-bleed) */
+section:not(.hero) {
     padding: .5em .5em;  /* was originally 3 and 1.5 but wanted less space between sections*/
     max-width: 900px;    /* this makes margins  */
     margin: 0 auto;      
@@ -84,7 +252,7 @@ section h2 {
 }
 
 footer {
-    background-color: #176c71;
+    background: linear-gradient(90deg,var(--accent), var(--accent-2));
     color: white;
     padding: 2em;
     text-align: center;
@@ -158,23 +326,6 @@ footer .container {
 }
 
 
-/*         getting rid of for now until i become more advanced in languages lol 
-.progress-bar {
-    background-color: #e0e0e0;
-    border-radius: 5px;
-    height: 15px;  /* Smaller height for the progress bar 
-    width: 80%;    /* Reduced width 
-    margin: 0 auto; /* Center the progress bar 
-}*/
-
-/*.progress {
-    text-align: center;
-    color: white;
-    height: 100%;
-    line-height: 15px;  /*align text vertically in the smaller bar 
-    border-radius: 5px;
-} */
-
 .progress-bar {
     position: relative;
     background-color: #e0e0e0;
@@ -204,62 +355,63 @@ footer .container {
 }
 .timeline {
     position: relative;
-    width: 70%;
+    max-width: 900px;
     margin: 40px auto;
-    max-width: 100%;
-    padding: 40px 0;
+    padding: 36px 0;
 }
 
+/* vertical center line */
 .timeline-line {
     position: absolute;
-    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
     width: 2px;
-    height: 100%;
-    background-color: #333;
+    background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.06));
     z-index: 0;
 }
 
+/* each timeline row is a 3-column grid: left / icon / right */
 .timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 64px 1fr;
+    column-gap: 24px;
+    align-items: start;
+    margin-bottom: 36px;
     position: relative;
-    width: 100%;
-    margin-bottom: 60px;
-    min-height: 100px;
 }
 
-/* Icon centered on the line */
 .timeline-icon {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
+    justify-self: center;
+    align-self: start;
+    background: #fff;
     border-radius: 50%;
-    border: 3px solid #333;
+    border: 3px solid rgba(0,0,0,0.12);
     padding: 10px;
     z-index: 2;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
 }
 
-/* Content blocks */
 .timeline-content.left,
 .timeline-content.right {
-    width: 45%;
-    position: relative;
-    padding: 10px 20px;
+    padding: 6px 12px;
     box-sizing: border-box;
+    width: 100%;
 }
 
-/* Left content aligned to left, text right-aligned */
-.timeline-content.left {
-    left: 0;
-    text-align: right;
-}
+.timeline-content.left { text-align: right; }
+.timeline-content.right { text-align: left; }
 
-/* Right content aligned to right, text left-aligned */
-.timeline-content.right {
-    left: 55%;
-    text-align: left;
+/* responsive: on small screens collapse to 2 columns (icon left, content full-width) */
+@media (max-width: 768px) {
+    .timeline-line { left: 28px; }
+    .timeline-item {
+        grid-template-columns: 48px 1fr;
+        column-gap: 12px;
+        align-items: start;
+    }
+    .timeline-icon { justify-self: start; margin-top: 4px; }
+    .timeline-content.left, .timeline-content.right { grid-column: 2; text-align: left; padding: 6px 0; }
 }
 
 /* project container for flexbox layout and project is on the side  */
@@ -613,5 +765,9 @@ html {
         font-size: 1em;
         margin-right: 15px;
     }
-    
-}
+
+    /* Force the main banners to the site gradient in case of leftover styles or caching */
+    nav, header, .topbar, footer {
+        background: linear-gradient(90deg,var(--accent), var(--accent-2)) !important;
+        color: #fff !important;
+    }

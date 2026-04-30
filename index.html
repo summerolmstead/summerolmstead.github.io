@@ -1,7 +1,7 @@
 <!-- 
  @ Summer Olmstead 
- 1/2/2025
- version 1.5
+ 1/2/2025 - last updated 4/30/2025
+ version 2.1
 Hello! This is some starter code for my website for my resume :) -->
 <!DOCTYPE html>
 <html lang="en">
@@ -14,139 +14,36 @@ Hello! This is some starter code for my website for my resume :) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- good for social media icons automatically -->
 </head>
 <body>
-    <header>
-        <h1>Summer Olmstead</h1>
-        <p> It Associate - Test Engineer. UTC Alumni. </p> 
-    <section id="contact">
-        <p> <a href="mailto:summerolmstead1@gmail.com"><i class="fas fa-envelope"></i> summerolmstead1@gmail.com</a></p>
-        <p></p> <!-- add space -->
-        <p> <a href="https://www.linkedin.com/in/summer-olmstead/" target="_blank"rel="noopener noreferrer"><i class="fab fa-linkedin"></i> LinkedIn</a></p>
-        <p></p>
-        <p> <a href="https://github.com/summerolmstead" target="_blank"><i class="fab fa-github"></i>Github</a></p>
-        <p></p>
+    <section class="hero">
+        <div class="hero-inner">
+            <img src="summerolmstead.jpg" alt="Summer Olmstead" class="hero-img">
+            <h2>Test Engineer & Data Enthusiast</h2>
+            <div class="hero-social">
+                <a href="mailto:summerolmstead1@gmail.com" class="top-link"><i class="fas fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/summer-olmstead/" target="_blank" rel="noopener noreferrer" class="top-link"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/summerolmstead" target="_blank" class="top-link"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
     </section>
-    </header>
 
     <nav>
         <ul>
             <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href ="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
+            <li><a href ="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
         </ul>
     </nav>
 
     <section id="about">
         <h2>About Me</h2>
         <div class="profile-container">
-        <img src="summerolmstead.jpg" alt="Summer Olmstead" class="profile-img">
-        <p>Hello! I'm Summer Olmstead, a recent graduate from The University of Tennessee at Chattanooga with a Bachelor's degree
+        <p> Hello! I'm Summer Olmstead, a recent graduate from The University of Tennessee at Chattanooga with a Bachelor's degree
         in Computer Science: Data Science and a minor in Economics. Currently, I work as a Test Engineer, leveraging Selenium
         and Java to develop automated test scripts, while also performing manual testing to ensure software quality. I'm always
         eager to connect - feel free to reach out via email or LinkedIn! </p>
         
         </div>
-    </section>
-
-    <section id="skills">
-        <div class="skills-category">
-          <h2 class="dropdown-header" onclick="toggleDropdown('programming')">
-            Programming Languages
-            <span class="arrow">&#9662;</span> <!--down arrow -->
-          </h2>
-          <div class="dropdown-content" id="programming">
-            
-            <div class="skill">
-            <div class="skill-name">Java</div>
-            <p> • Automated regression, smoke, and functional test suites for salesforce web applications using Java and Selenium. </p>
-            <p> • Designed and implemented robust, maintainable, and reusable test frameworks using Java and TestNG/JUnit. </p>
-            <p> • Integrated test scripts with Maven/Gradle for build management and Git for version control </p>
-            <p> • Proficient in using Java for developing automated test scripts in Selenium WebDriver </p>
-            <p> • Developed in Page Object Model (POM) framework for scalable test automation</p>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">SQL</div>
-                <p>• Proficient in using SOQL (Salesforce Object Query Language), a SQL-like language used to query Salesforce data for testing and debugging purposes.</p>
-              </div>
-      
-            <div class="skill">
-              <div class="skill-name">HTML</div>
-            <p>• Gained foundational HTML skills through college web development projects.</p>
-            <p>• Read and interpret HTML structure to create accurate XPath expressions for locating elements in automated UI tests.</p>
-            </div>
-      
-            <div class="skill">
-              <div class="skill-name">CSS</div>
-            <p>• Used for styling in front-end college projects to build responsive interfaces.</p>
-            <p>• Familiar with CSS selectors and attributes, used extensively for element identification in Selenium test automation.</p>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">JavaScript</div>
-                <p>• Used JavaScript to build Excel macros during internship at Unum, automating repetitive tasks.</p>
-                <p>• Comfortable writing JavaScript functions for test automation purposes, such as interacting with hidden DOM elements
-                    or triggering UI events in Selenium tests.</p>
-            </div>
-
-            <div class="skill">
-                <div class="skill-name">Python</div>
-                <p> • Utilized with libraries such as Pandas, NumPy, and Matplotlib, and used machine learning packages like
-                    Scikit-Learn for model development.</p>
-            </div>
-      
-          </div>
-        </div>
-      </section>
-
-      <!-- Applications/ IDEs Section (with dropdown) -->
-    <div class="skills-category">
-        <h2 class="dropdown-header" onclick="toggleDropdown('applications')">
-        Applications
-        <span class="arrow">&#9662;</span> <!-- Down Arrow -->
-        </h2>
-        <div class="dropdown-content" id="applications">
-  
-        <div class="skill">
-            <div class="skill-name">Salesforce</div>
-            <p>• Proficient in navigating Salesforce to manage queues, track service requests, and utilize dashboards for data
-                analysis and reporting.</p>
-            <p>• Experienced in leveraging Salesforce CRM tools to streamline workflows, improve operational efficiency, and support
-                customer service teams.</p>
-            <p>• Skilled in using Salesforce data to validate test cases and troubleshoot issues within the Quote Assist AI model
-                interface.</p>
-            <p>• Familiar with SOQL (Salesforce Object Query Language) for querying and verifying Salesforce data as part of quality
-                assurance processes.</p>
-        </div>
-
-        <div class="skill">
-            <div class="skill-name">Excel</div>
-            <p>Skilled in advanced functions like pivot tables, VLOOKUP, and macros for data automation.</p>
-        </div>
-  
-        <div class="skill">
-            <div class="skill-name">STATA</div>
-            <p>Skilled in performing advanced statistical analysis, including linear regressions and data manipulation, primarily through coursework in Economics.</p>
-        </div>
-
-        </div>
-    </div>
-  
-    <section id="education">
-        <h2>Education</h2>
-         <div class="utc-logo">
-            <h3> <img src="University_of_Tennessee_at_Chattanooga_athletics_logo.png" alt="UTC Logo" width="100" /> University of Tennessee at Chattanooga  </h3>
-        </div>
-        <h4><p>B.S. Computer Science: Data Science, minor in Economics | <em> May 2025 </em> </p> </h4>
-        <p>• Institutional GPA: 3.767,<em> Dean's List Awardee & Magna Cum Laude Graduate</em> </p>
-        <h3>Involvement</h3>
-
-       <p> Economics Club Member<em> | August 2024 - May 2025 </em></p>
-
-        <p> NSF ADACE <em> | January 2024 - May 2025 </em></p>
-        <p>• Participated in AI research funded by the National Science Foundation at UTC.</p>
-    
     </section>
 
     <section id="experience">
@@ -208,162 +105,83 @@ Hello! This is some starter code for my website for my resume :) -->
             <!-- More timeline items as needed -->
         </div>
     </section>
-    
-    <section id="projects">
-        <h2> Academic Projects</h2>
-        <ul>
-        <div class="projects-container">
-            <div class="project-description">
-                <p><strong>Global Happiness Linear Regression</strong>: <em>Data Analyst Project</em> </p>
-                <p> Conducted an econometric analysis of the Gallup World Poll to model country happiness using the Ladder Score as the dependent variable. Identified and quantified the impact of six key factors — economic production, social support, life expectancy, freedom, absence of corruption, and generosity — on happiness across countries using linear regression. Achieved an R-Squared value of 82.8% and an Adjusted R-Squared of 82.1% in the final robust model, demonstrating strong predictive performance. Applied econometrics knowledge to explain global happiness trends and identify factors contributing to higher life evaluations across countries. </p>
-            </div>
-            <div class="project-image-container">
-                <a href="https://github.com/summerolmstead/Happiness-Linear-Regression/tree/main" target="_blank" class="image-link">
-                    <img src="happiness-analysis-model.PNG" alt="Loan Approval Logistic Regression" class="project-image">
-                </a>
-            </div>
+
+    <section id="education">
+        <h2>Education</h2>
+         <div class="utc-logo">
+            <h3> <img src="University_of_Tennessee_at_Chattanooga_athletics_logo.png" alt="UTC Logo" width="100" /> University of Tennessee at Chattanooga  </h3>
         </div>
+        <h4><p>B.S. Computer Science: Data Science, minor in Economics | <em> May 2025 </em> </p> </h4>
+        <p>• Institutional GPA: 3.767,<em> Dean's List Awardee & Magna Cum Laude Graduate</em> </p>
+        <h3>Involvement</h3>
+
+       <p> Economics Club Member<em> | August 2024 - May 2025 </em></p>
+
+        <p> NSF ADACE <em> | January 2024 - May 2025 </em></p>
+        <p>• Participated in AI research funded by the National Science Foundation at UTC.</p>
     
-        <div class="projects-container">
-            <div class="project-description">
-                <p><strong>Loan Approval Logistic Regression</strong>:<em> Programming Languages for Advanced Data Analytics Final Fall 2024 </em> </p>
-                <p> Developed a logistic regression model to predict loan approval decisions based on key applicant characteristics. Fine-tuned the model to identify and quantify the impact of each variable on the likelihood of loan approval or denial. Analyzed the data to uncover insights on the most influential factors driving loan decisions, improving the understanding of approval patterns. Achieved strong model performance and used the results to inform loan approval criteria and decision-making processes. </p>
-            </div>
-            <div class="project-image-container">
-                <a href="https://github.com/summerolmstead/LoanApprovalLogisticRegression/blob/main/CS4180Final_Project.ipynb" target="_blank" class="image-link">
-                    <img src="logistic-regression-features-loan.png" alt="Loan Approval Logistic Regression" class="project-image">
-                </a>
-            </div>
-        </div>
-    
-        <div class="projects-container">
-            <div class="project-description">
-                <p><strong>RateYourCity App</strong>: <em>Social Media App for Travelers | Software Engineering Fall 2024</em> </p>
-                <p>Developed a demo version for Chattanooga, allowing users to review, like, and favorite activities (ex. Hotels, Restaurants, Tourist Attractions). Served as Scrum Master, leading the team and coordinating sprints. Designed and implemented server layers, focusing on backend development. Created a MongoDB Atlas database to collect and manage user data. Developed user signup, login logic, and authentication in the middle layer. Implemented security measures to ensure safe data transfer between frontend and backend. Created rating and comment system feature for all objects.</p>
-            </div>
-            <div class="project-image-container">
-                <a href="https://github.com/summerolmstead/Rate-Your-City-Copy" target="_blank" class="image-link">
-                    <img src="rate-your-city-home-page.jpg" alt="Rate Your City App Screenshot" class="project-image">
-                </a>
-            </div>
-        </div>
-    
-        </ul>
     </section>
-    
-    <section id="mini-projects">
-        <h2>Visualization Projects</h2>
-        <div class="projects-grid">
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Pizza-Sales-Visualization" class="project-link">
-                    <img src="pizza-heatmap1.png" alt="Project 1" class="project-img">
-                    <div class="overlay">
-                        <p>Pizza Sales Heatmap & Analysis</p>
-                    </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Brazil-Forest-Fires-Visualization/blob/main/interactive-brazil-fire-map-examples.PNG" class="project-link">
-                    <img src="interactive-brazil-fire-map.png" alt="Project 2" class="project-img">
-                    <div class="overlay">
-                        <p>Brazil Fires by State Interactive Map</p>
-                    </div>
-                </a>
-            </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Customer-Segmentation-Analysis" class="project-link">
-                    <img src="k-means-clustering-customer-segmentation.png" alt="Project 3" class="project-img">
-                    <div class="overlay">
-                        <p>Customer Segmentation PCA & K-Means Clustering</p>
-                    </div>
-                </a>
-            </div>
+        <section id="skills">
+                <div class="skills-category">
+                    <h2 class="dropdown-header">
+                        Programming Languages
+                    </h2>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Apple-Stock-Visualization" class="project-link">
-                    <img src="3d-apple-stock.PNG" alt="Project 4" class="project-img">
-                    <div class="overlay">
-                        <p>3D Apple Stock Visualization</p>
-                    </div>
-                </a>
-            </div>
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Spotify-Top-Songs-2023-Analysis" class="project-link">
-                    <img src="scatter-plot-matrix.png" alt="Project 5" class="project-img">
-                    <div class="overlay">
-                        <p>Top Spotify Songs of 2023 Pair Plot</p>
-                    </div>
-                </a>
-            </div>
+                    <!-- Always-visible programming grid (cute badges) -->
+                    <div class="programming-grid">
+                        <div class="skill">
+                            <div class="skill-name">Java</div>
+                            <p>Automated regression, smoke, and functional test suites using Selenium & Java.</p>
+                        </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Airport-Flights-Network/tree/main" class="project-link">
-                    <img src="U.S.-major-city-visual.PNG" alt="Project 6" class="project-img">
-                    <div class="overlay">
-                        <p>Interactive U.S. Major City Airport Network</p>
-                    </div>
-                </a>
-            </div>
+                        <div class="skill">
+                            <div class="skill-name">SQL</div>
+                            <p>Querying & validating relational data; used in testing and reporting.</p>
+                        </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Animal-Classification-Decision-Tree" class="project-link">
-                    <img src="statistical-decision-tree-animal.png" alt="Project 7" class="project-img">
-                    <div class="overlay">
-                        <p>Animal Classification Decision Tree</p>
-                    </div>
-                </a>
-            </div>
+                        <div class="skill">
+                            <div class="skill-name">SOQL</div>
+                            <p>Salesforce Object Query Language — querying Salesforce data for tests.</p>
+                        </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Facebook-Social-Circle-Network" class="project-link">
-                    <img src="kawaii-layout-facebook-network.png" alt="Project 8" class="project-img">
-                    <div class="overlay">
-                        <p>Facebook Social Network</p>
-                    </div>
-                </a>
-            </div>
+                        <div class="skill">
+                            <div class="skill-name">HTML</div>
+                            <p>Front-end structure & XPath knowledge for test automation.</p>
+                        </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Wine-Quality-Exploration" class="project-link">
-                    <img src="parallel-coordinates.png" alt="Project 9" class="project-img">
-                    <div class="overlay">
-                        <p>Wine Quality Parallel Coordinates Plot</p>
-                    </div>
-                </a>
-            </div>
+                        <div class="skill">
+                            <div class="skill-name">CSS</div>
+                            <p>Responsive styling and selectors used in automation.</p>
+                        </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/US-Chipotle-Locations" class="project-link">
-                    <img src="us-chipotle-map.PNG" alt="Project 10" class="project-img">
-                    <div class="overlay">
-                        <p>Geospatial U.S. Chiptole Locations Map</p>
-                    </div>
-                </a>
-            </div>
+                        <div class="skill">
+                            <div class="skill-name">JavaScript</div>
+                            <p>Automation helpers, macros, and DOM scripting.</p>
+                        </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Snow-Crab-Geospatial" class="project-link">
-                    <img src="snow-crab-distribution (1).PNG" alt="Project 11" class="project-img">
-                    <div class="overlay">
-                        <p>Alaskan Snow Crab Geospatial</p>
-                    </div>
-                </a>
-            </div>
+                        <div class="skill">
+                            <div class="skill-name">Python</div>
+                            <p>Data work with Pandas, NumPy; ML prototyping.</p>
+                        </div>
+            
+                                    <div class="skill">
+                                        <div class="skill-name">Gherkin</div>
+                                        <p>Behavior-driven scenarios for readable, executable specs.</p>
+                                    </div>
 
-            <div class="project-item">
-                <a href="https://github.com/summerolmstead/Climate-Change-Geospatial" class="project-link">
-                    <img src="1999-climate-change-pic.png" alt="Project 12" class="project-img">
-                    <div class="overlay">
-                        <p> Global Climate Change </p>
+                        </div>
+                        <!-- Testing tools chips under Programming Languages -->
+                        <h3 class="testing-title">Testing Tools</h3>
+                        <div class="testing-tools" aria-label="Testing Tools">
+                            <div class="tool-chip">Karate</div>
+                            <div class="tool-chip">Postman</div>
+                            <div class="tool-chip">Selenium</div>
+                        </div>
                     </div>
-                </a>
-            </div>
+                </div>
+            </section>
 
-        
-        </div>
-    </section>
-   
     <script>
         //javaScript for toggling the dropdown
         function toggleDropdown(id) 
@@ -379,7 +197,7 @@ Hello! This is some starter code for my website for my resume :) -->
     </script>
 </body>
 <footer>
-    <p>&copy; 2025 Summer Olmstead</p>
+    <p>&copy; 2026 Summer Olmstead</p>
 </footer>
 </html>
 
