@@ -150,6 +150,31 @@ a{color:var(--accent-2)}
     .timeline-content.left, .timeline-content.right{grid-column:2;text-align:left;padding:0}
 }
 
+/* Mobile timeline safety: hide the vertical line on small devices to avoid visual overlap
+   and ensure clear stacking of items. This override uses !important to beat legacy rules. */
+@media (max-width: 600px) {
+    .timeline-line {
+        display: none !important;
+        visibility: hidden !important;
+    }
+    .timeline-item {
+        display: grid !important;
+        grid-template-columns: 40px 1fr !important;
+        column-gap: 12px !important;
+        align-items: start !important;
+    }
+    .timeline-icon {
+        justify-self: start !important;
+        margin-top: 4px !important;
+    }
+    .timeline-content.left, .timeline-content.right {
+        grid-column: 2 !important;
+        text-align: left !important;
+        padding: 6px 0 !important;
+        width: 100% !important;
+    }
+}
+
 /* Page width consistency and header/footer gradient */
 nav ul {
     max-width: var(--content-max-width);
