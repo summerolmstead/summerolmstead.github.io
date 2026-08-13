@@ -7,9 +7,9 @@
 /* Import EB Garamond for the site */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;600;700&display=swap');
 
-/* --- Modern / Cute theme overrides --- */
+
 :root{
-    --accent:#6940e3; 
+    --accent:#8b69f2; 
     --accent-2:#ce87f2; 
     --muted:#6B6B7A;
     --card:#FFF7F8;
@@ -17,12 +17,11 @@
 }
 
 body{
-    background: linear-gradient(180deg,#fff 0%, #FFFBF7 100%);
+    background: linear-gradient(180deg,#ffffff 0%, #FFFBF7 100%);
     color: #333;
 }
 
 .hero{
-    /* make the hero a full-bleed banner (override generic section rules) */
     width: 100%;
     max-width: 100%;
     margin: 0;
@@ -39,7 +38,7 @@ body{
     width:120px;
     height:120px;
     border-radius:50%;
-    border:6px solid rgba(255,255,255,0.6);
+    border:6px solid rgba(255, 255, 255, 0.6);
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
     object-fit:cover;
 }
@@ -65,11 +64,11 @@ section h2, .timeline-content h3 {
 section{background:transparent}
 
 /* make sections look like soft cards */
-section > .skills-category, section > .utc-logo, .projects-container{background:var(--card);border-radius:12px;padding:18px;margin:12px 0;box-shadow: 0 6px 18px rgba(0,0,0,0.04)}
+section > .skills-category, section > .projects-container{background:var(--card);border-radius:12px;padding:18px;margin:12px 0;box-shadow: 0 6px 18px rgba(0,0,0,0.04)}
 
 /* Programming grid: cute badge-style skills */
 .programming-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
-.programming-grid .skill{background:linear-gradient(180deg,rgba(255,255,255,0.9),rgba(255,255,255,0.95));border-radius:12px;padding:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04);text-align:center}
+.programming-grid .skill{background:linear-gradient(180deg,rgba(236, 202, 248, 0.9),rgba(255,255,255,0.95));border-radius:12px;padding:12px;box-shadow:0 6px 12px rgba(0,0,0,0.04);text-align:center}
 .programming-grid .skill-name{font-weight:700;color:var(--accent);margin-bottom:6px;font-size:1.05rem}
 .programming-grid .skill p{font-size:0.92rem;color:var(--muted);margin:0}
 .programming-grid .skill:hover{transform:translateY(-4px);transition:transform 150ms ease, box-shadow 150ms ease;box-shadow:0 10px 20px rgba(0,0,0,0.06)}
@@ -86,7 +85,7 @@ section > .skills-category, section > .utc-logo, .projects-container{background:
 
 /* Testing tools chips */
 .testing-tools{display:flex;gap:10px;justify-content:center;margin-top:14px;flex-wrap:wrap}
-.tool-chip{background:rgba(255,255,255,0.95);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;box-shadow:0 6px 12px rgba(0,0,0,0.04)}
+.tool-chip{background:rgba(237, 172, 250, 0.95);padding:8px 12px;border-radius:999px;color:var(--muted);font-weight:600;box-shadow:0 6px 12px rgba(0,0,0,0.04)}
 .tool-chip:hover{transform:translateY(-3px);box-shadow:0 10px 18px rgba(0,0,0,0.06)}
 
 .testing-title{font-family:'EB Garamond', serif;text-align:center;margin-top:18px;margin-bottom:8px;color:#3a3a44}
@@ -101,7 +100,6 @@ section > .skills-category, section > .utc-logo, .projects-container{background:
 #education h3 + p,
 #education h3 ~ p {
     font-size: 0.95rem;
-    color: var(--muted);
     margin: 0.25em 0;
 }
 
@@ -192,9 +190,7 @@ footer{
 }
 footer p { max-width: var(--content-max-width); margin: 0 auto; }
 
-/* Make sure section widths align to the same content width */
 section, .hero-inner, .topbar-inner, .timeline { box-sizing: border-box; }
-
 
 body {
     font-family: 'EB Garamond', Georgia, serif;
@@ -205,13 +201,11 @@ html, body {
     width: 100%;
   }
 
-/*ensure content stretches properly */
 main {
-    flex-grow: 1; /* makes the main content area grow and take up the available space */
+    flex-grow: 1; 
 }
 
 header {
-    background: linear-gradient(90deg,var(--accent), var(--accent-2));
     color: #fff;
     padding: 2em;
     text-align: center;
