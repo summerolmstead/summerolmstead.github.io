@@ -9,8 +9,8 @@
 
 /* --- Modern / Cute theme overrides --- */
 :root{
-    --accent:#FF9AA2; /* soft pink */
-    --accent-2:#FFD3B6; /* peach */
+    --accent:#6940e3; 
+    --accent-2:#ce87f2; 
     --muted:#6B6B7A;
     --card:#FFF7F8;
     --content-max-width: 900px;
