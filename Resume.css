@@ -17,7 +17,7 @@
 }
 
 body{
-    background: linear-gradient(180deg,#ffffff 0%, #FFFBF7 100%);
+    background: linear-gradient(180deg,#ffffff 0%, #ffffff 100%);
     color: #333;
 }
 
@@ -64,7 +64,7 @@ section h2, .timeline-content h3 {
 section{background:transparent}
 
 /* make sections look like soft cards */
-section > .skills-category, section > .projects-container{background:var(--card);border-radius:12px;padding:18px;margin:12px 0;box-shadow: 0 6px 18px rgba(0,0,0,0.04)}
+section > .skills-category, section > .projects-container{border-radius:12px;padding:18px;margin:12px 0;box-shadow: 0 6px 18px rgba(0,0,0,0.04)}
 
 /* Programming grid: cute badge-style skills */
 .programming-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-top:12px}
