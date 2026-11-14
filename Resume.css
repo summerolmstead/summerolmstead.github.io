@@ -463,27 +463,32 @@ footer p {
     }
 
     .timeline-line {
-        left: 27px;
+        left: 31px;
         transform: none;
     }
 
     .timeline-item {
-        grid-template-columns: 54px 1fr;
-        column-gap: 0.8rem;
+        grid-template-columns: 62px 1fr;
+        column-gap: 0.5rem;
+        align-items: center;
     }
 
     .timeline-content.left,
     .timeline-content.right {
         grid-column: 2;
         text-align: left;
-        padding: 1rem;
+        padding: 0.9rem 0.9rem 0.2rem;
     }
 
     .timeline-icon {
         grid-column: 1;
         justify-self: center;
-        width: 42px;
-        height: 42px;
+        align-self: center;
+        width: 44px;
+        height: 44px;
+        margin: 0;
+        position: relative;
+        left: 0;
     }
 
     .utc-logo {
