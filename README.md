@@ -1,1 +1,7 @@
-This is a personal passion project which I decided to make mainly to be another form of my own personal resume. I always enjoy creating new things and what better way than to showcase some of my skills in a way that is my own creative vision! I hope you enjoy browsing! :)
+Hello there!
+
+Welcome to my Resume Website. I like to keep my career skills up to date here and showcase my skillset. Feel free to roam around or reach out to me via email or linked in if desired.
+
+Best, 
+
+Summer Olmstead :) 
